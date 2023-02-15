@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/imagens/favicon.svg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="page">
+  <header>
+    <h2>Cadastro de Usuário</h2>
+    <p>Preencha os dados para cadastrar o seu usuário</p>
+  </header>
+  <form>
+      <fieldset>
+      <div class="fieldset-wrapper">
+        <legend>Dados do usuário</legend>
+        
+        <div class="input-wrapper">
+          <label for="name">Nome Completo</label>
+          <input type="text" id="name" required/>
+        </div>
+        <div class="input-wrapper">
+          <label for="phone">Telefone <span>com DDD</span></label>
+          <input type="number" id="phone" required minlength="33" />
+        </div>
+        <div class="input-wrapper">
+          <label for="email">E-Mail:</label>
+          <input type="email" id="email" />
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <div class="fieldset-wrapper">
+        <legend>Observação</legend>
+        
+        <div class="input-wrapper">
+          <label for="obs">Observação:</label>
+          <textarea id="obs"></textarea>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <div class="fieldset-wrapper">
+        <legend>Data do Cadastro</legend>
+        
+        <div class="data-wrapper">
+          <label for="date">Data:</label>
+          <input type="date" id="date" />
+          <label for="time">Hora:</label>
+          <input type="time" id="time" />
+        </div>
+      </div>
+    </fieldset>
+    <fieldset>
+      <div class="fieldset-wrapper">
+        <legend>Tipo de Usuário</legend>
+        <div class="select-wrapper">
+          <select name="tipo" id="tipo">
+            <option value="selecione">Selecione o tipo de usuário</option>
+            <option value="administrador">Administrador</option>
+            <option value="usuario">Usuário</option>
+          </select>
+        </div>
+        <div class="checkbox-wrapper">
+          <input type="checkbox" id="status">
+          <label for="status">Usuário ativo</label>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <div class="fieldset-wrapper">
+        <div class="button-wrapper">
+        <input type="submit" value="Enviar">
+        </div>
+      </div>
+    </fieldset>
+    </form>  
+</div>
+</body>
+</html>
